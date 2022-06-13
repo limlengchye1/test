@@ -2,11 +2,9 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod
-  labels:
-    foo: bar
 spec:
   containers:
-    - image: k8s.gcr.io/pause:3.5
+    - image: registry.nz.thenational.com/rfod/pause:3.5
       imagePullPolicy: Always
       name: pause
       resources:
@@ -17,7 +15,6 @@ spec:
           cpu: 250m
           memory: 512Mi
       securityContext:
-        privileged: true
         allowPrivilegeEscalation: false
         capabilities:
           drop:
