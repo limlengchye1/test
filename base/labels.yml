@@ -1,0 +1,12 @@
+apiVersion: builtin
+kind: LabelTransformer
+metadata:
+  name: labels
+labels:
+  SecurityContext: Internal
+  SecurityExposure: Internal
+  Environment: sandbox
+fieldSpecs:
+- path: metadata/labels
+  create: true
+  kind: Pod

@@ -1,0 +1,5 @@
+resources:
+- pod.yml
+
+transformers:
+- labels.yml 
